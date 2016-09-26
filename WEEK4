@@ -21,9 +21,6 @@ void drawPixel(const int& i, const int& j, const float& red, const float& green,
 
 bool circle(double xpos, double ypos, int c1, int c2, int r)
 {
-	if (r < 80)
-	return false;
-
 	double sqrt = (xpos - c1)*(xpos - c1) + (ypos - c2)*(ypos - c2) - r*r;
 
 	if (sqrt > 0)
