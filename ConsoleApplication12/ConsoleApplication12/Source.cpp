@@ -70,7 +70,7 @@ int main(void)
 		for (int i = 0; i < 40; i++)
 			my_icons[i]->draw(pixels);
 
-		/* Initialize circle*/
+		/*circle*/
 		for (int i = 0; i < 10; i++)
 		{
 			my_icons[i] = new circle(70 + i * 120, 300, 50);
@@ -79,17 +79,17 @@ int main(void)
 		{
 			my_icons[i] = new circle(70 + (i - 10) * 120, 100, 50);
 		}
-		/* Initialize box*/
+		/*box*/
 		for (int i = 20; i < 22; i++)
 		{
 			my_icons[i] = new box(280 + 600 * (i - 20), 270, 340 + 600 * (i - 20), 330, 1.0f, 0.0f, 0.0f);
 		}
-		/* Initialize A*/
+		/* A*/
 		for (int i = 22; i < 24; i++)
 		{
 			my_icons[i] = new A(170 + 600 * (i - 22), 70, 190 + 600 * (i - 22), 120, 210 + 600 * (i - 22), 70, 180 + 600 * (i - 22), 100, 200 + 600 * (i - 22), 100, 1.0f, 0.0f, 0.0f);
 		}
-		/* Initialize '|' lines*/
+		/*lines*/
 		for (int i = 24; i < 26; i++)
 		{
 			Line *li = new Line;
@@ -99,7 +99,7 @@ int main(void)
 			li->end_y = 140;
 			my_icons[i] = li;
 		}
-		/* Initialize arrows*/
+		/*arrow*/
 		for (int i = 26; i < 28; i++)
 		{
 			my_icons[i] = new Arrow(540 + 600 * (i - 26), 110, 560 + 600 * (i - 26), 130, 560 + 600 * (i - 26), 70, 580 + 600 * (i - 26), 110, 1.0f, 0.0f, 0.0f);
@@ -108,7 +108,7 @@ int main(void)
 		{
 			my_icons[i] = new Arrow(540 + 600 * (i - 28), 290, 560 + 600 * (i - 28), 270, 560 + 600 * (i - 28), 330, 580 + 600 * (i - 28), 290, 1.0f, 0.0f, 0.0f);
 		}
-		/* I nitialize arrows2*/
+		/*arrow2*/
 		for (int i = 30; i < 32; i++)
 		{
 			my_icons[i] = new Arrow2(80 + 600 * (i - 30), 110, 90 + 600 * (i - 30), 100, 80 + 600 * (i - 30), 90, 40 + 600 * (i - 30), 100, 1.0f, 0.0f, 0.0f);
@@ -117,12 +117,12 @@ int main(void)
 		{
 			my_icons[i] = new Arrow2(410 + 600 * (i - 32), 110, 400 + 600 * (i - 32), 100, 410 + 600 * (i - 32), 90, 470 + 600 * (i - 32), 100, 1.0f, 0.0f, 0.0f);
 		}
-		/* Initialize X*/
+		/*X*/
 		for (int i = 34; i < 36; i++)
 		{
 			my_icons[i] = new X(420 + 600 * (i - 34), 280, 460 + 600 * (i - 34), 320, 420 + 600 * (i - 34), 320, 460 + 600 * (i - 34), 280, 1.0f, 0.0f, 0.0f);
 		}
-		/* Thick Line*/
+		/* Thick*/
 		for (int i = 36; i < 38; i++)
 		{
 			Thick *thi = new Thick;
@@ -132,18 +132,20 @@ int main(void)
 			thi->end_y = 330;
 			my_icons[i] = thi;
 		}
-		/*circle in circle*/
-		for (int i = 38; i < 40; i++)
-		{
-			my_icons[i] = new circle(190 + 600 * (i - 38), 300, 25);
-		}
-
+		
 		/* fillbox*/
 		for (int i = 0; i < 10; i++)
 			my_icons1[i] = new GeometricObject(10 + i * 120, 230, 130 + i * 120, 360);
 		for (int i = 10; i < 20; i++)
 			my_icons1[i] = new GeometricObject(10 + (i - 10) * 120, 30, 130 + (i - 10) * 120, 160);
+		
+		/*in circle*/
+		for (int i = 38; i < 40; i++)
+		{
+			my_icons[i] = new circle(190 + 600 * (i - 38), 300, 25);
+		}
 
+		
 		/* Initialize the library */
 		if (!glfwInit())
 			return -1;
