@@ -5,7 +5,7 @@ Arrow2::Arrow2(const int& _i0, const int& _j0, const int& _i1, const int& _j1, c
 	initialize(_i0, _j0, _i1, _j1, _i2, _j2, _i3, _j3);
 }
 
-void Arrow2::initialize(const int& _i0, const int& _j0, const int& _i1, const int& _j1, const int& _i2, const int& _j2, const int& _i3, const int& _j3)
+void Arrow2::ini(const int& _i0, const int& _j0, const int& _i1, const int& _j1, const int& _i2, const int& _j2, const int& _i3, const int& _j3)
 {
 	i0 = _i0;
 	j0 = _j0;
